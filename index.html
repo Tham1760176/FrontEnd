@@ -13,7 +13,6 @@
     <body>
         <header>
             <div class="wapper">
-                <div class="layer"></div>
                 <div class="menu">
                     <a class="logo" href="index.html">
                         <img src="./resourses/img/logo.jpg" alt="">
@@ -21,9 +20,9 @@
                     </a>
                     <div class="main-menu">
                         <a href="">how it works</a>
-                        <a href="">workflows
+                        <a href="#" onclick="openSub1()">workflows
                             <i class="fa-solid fa-caret-down"></i>
-                            <div class="sub-menu1">
+                            <div class="sub-menu1" id="openSub1">
                                 <a href="">aodio console</a>
                                 <a href="">photo console</a>
                                 <a href="">video console </a>
@@ -34,10 +33,11 @@
                         <a href="">blog</a>
                         <a href="">support</a>
                         <a href="">shop</a>
-                        <a href=""><i class="fa-solid fa-bag-shopping"></i>
+                        <a href="#" onclick="openSub2()"><i class="fa-solid
+                                fa-bag-shopping"></i>
                             usd
                             <i class="fa-solid fa-caret-down"></i>
-                            <div class="sub-menu2">
+                            <div class="sub-menu2" id="sub2">
                                 <a href="">aud( &#36 )</a>
                                 <a href="">cad( &#36 )</a>
                                 <a href="">eur( &#8364 )</a>
@@ -47,6 +47,77 @@
                                 <a href="">usd( &#36)</a>
                             </div>
                         </a>
+                    </div>
+                    <div class="icon-menu-mobile">
+                        <div class="icon">
+                            <a onclick="openNav(event)"><i class="fa-solid
+                                    fa-bars"></i></a>
+                            <a href=""><i class="fa-solid fa-lock"></i></a>
+                            <a onclick="openSub2(event)"> &#36 <i
+                                    class="fa-solid
+                                    fa-caret-down"></i>
+                                <div class="sub-menu2-mobile" id="sub2-mobile">
+                                    <a href="">aud( &#36 )</a>
+                                    <a href="">cad( &#36 )</a>
+                                    <a href="">eur( &#8364 )</a>
+                                    <a href="">gbp( &#163 )</a>
+                                    <a href="">jpy( &#165 )</a>
+                                    <a href="">krw( &#8361 )</a>
+                                    <a href="">usd( &#36)</a>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="menu-mobile" id="menu-mobile">
+                    <a class="logo-mobile" href="">
+                        <img src="./resourses/img/logo.jpg" alt="">
+                        <p>monogram</p>
+                        <i onclick="closeNav()" class="fa-solid
+                            fa-xmark" id="close"> </i>
+                    </a>
+
+                    <hr>
+                    <div class="main-menu-mobile">
+                        <a href="">how it works
+                            <hr>
+                        </a>
+
+                        <a href="">workflows
+                            <hr>
+                            <div class="sub-menu-mobile">
+                                <a href="">audio console
+                                    <hr> </a>
+
+                                <a href="">photo console
+                                    <hr>
+                                </a>
+
+                                <a href="">video console
+                                    <hr>
+                                </a>
+
+                                <a href="">mini console
+                                    <hr>
+                                </a>
+
+                            </div>
+                        </a>
+                        <a href="">download
+                            <hr>
+                        </a>
+
+                        <a href="">blog
+                            <hr>
+                        </a>
+
+                        <a href="">support
+                            <hr>
+                        </a>
+
+                        <a href="">shop</a>
                     </div>
                 </div>
                 <div class="container">
@@ -317,7 +388,7 @@
 
                             </div>
                             <div class="btn-module">
-                                <label for="">&#36 19 - &#36 129</label>
+                                <label for="">&#36 19-&#36 129</label>
                                 <button>BUY NOW</button>
                             </div>
                         </div>
@@ -372,16 +443,70 @@
                         <div class="icon-footer">
                             <a href=""><i class="fa-brands fa-instagram"></i></a>
                             <a href=""><i class="fa-brands fa-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands
+                                    fa-facebook-f" style="width: 15px;"></i></a>
                             <a href=""><i class="fa-brands fa-youtube"></i></a>
                         </div>
                         <p>© Monogram 2022</p>
                     </div>
                 </div>
+                <div class="footer-mobile">
+                    <div class="inf-footer">
+                        <h5>SUBSCRIBE TO MONOGRAM</h5>
+                        <p>Master productivity with Creative Console and get
+                            all
+                            the latest Monogram news.</p>
+                        <div class="inf">
+                            <input type="text" placeholder="Email Address">
+                            <button>SUBMIT</button>
+                        </div>
+                        <div class="icon-footer">
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands
+                                    fa-facebook-f" style="width: 15px;"></i></a>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="box-footer">
+                        <div class="box-footer-mobile">
+                            <h5>MONOGRAM</h5>
+                            <label for="">305 King St. W.
+                                Suite 502
+                                Kitchener, ON
+                                Canada</label>
+                        </div>
+                        <div class="box-footer-mobile">
+                            <h5>QUICK LINKS</h5>
+                            <a href="" class="menu-footer">Home</a>
+                            <a href="" class="menu-footer">How it Works</a>
+                            <a href="" class="menu-footer">Shop</a>
+                            <a href="" class="menu-footer">Download</a>
+                        </div>
+                        <div class="box-footer-mobile">
+                            <h5>HELP</h5>
+                            <a href="" class="menu-footer">FAQS</a>
+                            <a href="" class="menu-footer">Support Center</a>
+                            <a href="" class="menu-footer">Shipping and Sales</a>
+                        </div>
+                        <div class="box-footer-mobile">
+                            <h5>INFORMATION</h5>
+                            <a href="" class="menu-footer">About Us</a>
+                            <a href="" class="menu-footer">Work with us</a>
+                            <a href="" class="menu-footer">Privacy Policy</a>
+                            <a href="" class="menu-footer">Terms of Use</a>
+                            <a href="" class="menu-footer">Terms of Sale</a>
+                            <a href="" class="menu-footer">Press Kit</a>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </footer>
     </body>
+    <script src="./resourses/js/main.js"></script>
     <script src="./vendor/fontawesome/js/all.min.js"></script>
     <script src="./vendor/fontawesome/js/fontawesome.min.js"></script>
 </html>
